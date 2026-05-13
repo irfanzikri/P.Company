@@ -1,11 +1,13 @@
+# Full Website Code — P.Company
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>P.Company | Maritime & Logistics</title>
 
-  <!-- ICON -->
   <link rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
@@ -20,6 +22,7 @@
     body{
       background:#f4f7fa;
       color:#333;
+      line-height:1.7;
     }
 
     header{
@@ -29,10 +32,13 @@
       display:flex;
       justify-content:space-between;
       align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
 
     header h1{
-      font-size:30px;
+      font-size:32px;
     }
 
     nav a{
@@ -59,20 +65,20 @@
     }
 
     .hero-content{
-      background:rgba(0,0,0,0.6);
+      background:rgba(0,0,0,0.65);
       padding:40px;
-      border-radius:10px;
+      border-radius:12px;
       max-width:900px;
     }
 
     .hero h2{
-      font-size:45px;
+      font-size:48px;
       margin-bottom:20px;
     }
 
     .hero p{
-      line-height:1.8;
       font-size:17px;
+      line-height:1.8;
     }
 
     .btn{
@@ -82,7 +88,7 @@
       background:#00bfff;
       color:white;
       text-decoration:none;
-      border-radius:5px;
+      border-radius:6px;
       transition:0.3s;
     }
 
@@ -96,65 +102,85 @@
 
     .section-title{
       text-align:center;
-      margin-bottom:40px;
+      font-size:38px;
+      margin-bottom:50px;
       color:#003366;
-      font-size:35px;
     }
 
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
-    }
-
-    .card{
+    .service-box{
       background:white;
-      padding:30px;
-      border-radius:10px;
+      border-radius:12px;
+      overflow:hidden;
+      margin-bottom:40px;
       box-shadow:0 5px 15px rgba(0,0,0,0.1);
-      transition:0.3s;
     }
 
-    .card:hover{
-      transform:translateY(-5px);
+    .service-box img{
+      width:100%;
+      height:350px;
+      object-fit:cover;
     }
 
-    .card i{
+    .service-content{
+      padding:30px;
+    }
+
+    .service-content i{
       font-size:40px;
       color:#00bfff;
       margin-bottom:20px;
     }
 
-    .about{
-      background:#ffffff;
-      line-height:1.8;
-      text-align:justify;
-    }
-
-    .contact{
-      text-align:center;
-      background:#003366;
-      color:white;
-    }
-
-    .contact h3{
+    .service-content h3{
       margin-bottom:15px;
+      color:#003366;
       font-size:28px;
     }
 
+    .service-content h4{
+      margin-top:20px;
+      margin-bottom:10px;
+      color:#00509e;
+    }
+
+    .about{
+      background:white;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      padding:40px;
+    }
+
+    .contact{
+      background:#003366;
+      color:white;
+      text-align:center;
+    }
+
+    .contact h3{
+      font-size:35px;
+      margin-bottom:20px;
+    }
+
     .social-icons{
-      margin-top:25px;
+      margin-top:30px;
     }
 
     .social-icons a{
       color:white;
-      font-size:28px;
+      font-size:30px;
       margin:0 15px;
+      text-decoration:none;
       transition:0.3s;
     }
 
     .social-icons a:hover{
       color:#00bfff;
+    }
+
+    .social-name{
+      display:block;
+      font-size:14px;
+      margin-top:8px;
     }
 
     footer{
@@ -174,130 +200,178 @@
       }
 
       .hero h2{
-        font-size:30px;
+        font-size:32px;
+      }
+
+      section{
+        padding:50px 20px;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>P.Company</h1>
+<header>
+  <h1>P.Company</h1>
 
-    <nav>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About Us</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
+  <nav>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+</header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Maritime & Logistics Solutions</h2>
-
-      <p>
-        P.Company merupakan perusahaan yang bergerak di bidang pelayaran 
-        dan logistik maritim terpadu dengan layanan profesional, efisien, 
-        dan terpercaya untuk mendukung kebutuhan transportasi laut dan 
-        distribusi logistik nasional maupun internasional.
-      </p>
-
-      <a href="#about" class="btn">Learn More</a>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section id="portfolio">
-    <h2 class="section-title">Our Services</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <i class="fa-solid fa-ship"></i>
-        <h3>Ship Agency</h3>
-        <p>
-          Pelayanan agen kapal profesional mulai dari pengurusan dokumen 
-          hingga koordinasi operasional pelabuhan.
-        </p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-boxes-stacked"></i>
-        <h3>Supply Chain</h3>
-        <p>
-          Solusi manajemen rantai pasok yang efektif, efisien, 
-          dan terintegrasi.
-        </p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-anchor"></i>
-        <h3>Stevedoring</h3>
-        <p>
-          Jasa bongkar muat profesional dengan standar keselamatan 
-          dan efisiensi tinggi.
-        </p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-truck-fast"></i>
-        <h3>Freight Forwarding</h3>
-        <p>
-          Pengiriman barang domestik dan internasional secara cepat 
-          dan terpercaya.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <h2 class="section-title">About Us</h2>
+<section class="hero">
+  <div class="hero-content">
+    <h2>Maritime & Logistics Solutions</h2>
 
     <p>
-      P.Company hadir sebagai perusahaan pelayaran dan logistik maritim 
-      terpadu yang berfokus pada pelayanan terbaik dalam bidang ship agency, 
-      supply chain management, stevedoring, dan freight forwarding.
-      Dengan tenaga profesional dan sistem operasional modern, kami 
-      berkomitmen memberikan solusi maritim yang aman, cepat, dan efisien 
-      bagi seluruh pelanggan dan mitra bisnis.
+      P.Company merupakan perusahaan yang bergerak di bidang pelayaran dan logistik maritim terpadu yang berkomitmen memberikan layanan profesional, efisien, dan terpercaya bagi kebutuhan industri maritim nasional maupun internasional.
     </p>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h3>Contact Us</h3>
+    <a href="#portfolio" class="btn">View Portfolio</a>
+  </div>
+</section>
 
-    <p>Email : P.company@.com</p>
-    <p>Admin : +62 838-4647-2842</p>
+<section id="portfolio">
+  <h2 class="section-title">Company Portfolio</h2>
 
-    <div class="social-icons">
+  <!-- SHIP AGENCY -->
+  <div class="service-box">
+    <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1400" alt="Ship Agency">
 
-      <!-- INSTAGRAM -->
-      <a href="https://instagram.com" target="_blank">
-        <i class="@Pcompany_"></i>
-      </a>
+    <div class="service-content">
+      <i class="fa-solid fa-ship"></i>
+      <h3>Ship Agency Services</h3>
 
-      <!-- WHATSAPP -->
-      <a href="https://wa.me/6283846472842" target="_blank">
-        <i class="6283846472842"></i>
-      </a>
+      <p>
+        P.Company berhasil menjalin kerja sama operasional dengan perusahaan pelayaran internasional dalam pengelolaan pelayanan kapal cargo di Pelabuhan Belawan. Kerja sama ini mencakup pengurusan dokumen kapal, koordinasi sandar, clearance, crew handling, serta kebutuhan operasional kapal selama berada di pelabuhan.
+      </p>
 
-      <!-- TWITTER -->
-      <a href="https://twitter.com" target="_blank">
-        <i class="@Pcompany"></i>
-      </a>
-
+      <h4>Result:</h4>
+      <p>
+        Proses pelayanan kapal berhasil dilakukan lebih cepat 25% dibandingkan operasional sebelumnya dan meningkatkan efisiensi waktu sandar kapal.
+      </p>
     </div>
-  </section>
+  </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 P.Company | Maritime & Logistics Company</p>
-  </footer>
+  <!-- SUPPLY CHAIN -->
+  <div class="service-box">
+    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400" alt="Supply Chain">
+
+    <div class="service-content">
+      <i class="fa-solid fa-boxes-stacked"></i>
+      <h3>Supply Chain Management</h3>
+
+      <p>
+        P.Company bekerja sama dengan perusahaan distribusi nasional untuk mengintegrasikan sistem logistik dan rantai pasok pengiriman barang antarpulau. Sistem monitoring dan pengelolaan distribusi diterapkan secara real-time untuk meningkatkan efektivitas pengiriman.
+      </p>
+
+      <h4>Result:</h4>
+      <p>
+        Kerja sama berhasil meningkatkan ketepatan waktu distribusi hingga 30% serta mengurangi keterlambatan pengiriman barang.
+      </p>
+    </div>
+  </div>
+
+  <!-- STEVEDORING -->
+  <div class="service-box">
+    <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?q=80&w=1400" alt="Stevedoring">
+
+    <div class="service-content">
+      <i class="fa-solid fa-anchor"></i>
+      <h3>Stevedoring</h3>
+
+      <p>
+        Dalam proyek bongkar muat curah kering bersama perusahaan industri bahan baku, P.Company menyediakan tenaga kerja profesional dan sistem pengawasan keselamatan kerja untuk memastikan proses operasional berjalan aman dan efisien.
+      </p>
+
+      <h4>Result:</h4>
+      <p>
+        Aktivitas bongkar muat berhasil diselesaikan sebelum target waktu dan menurunkan risiko kerusakan barang selama operasional berlangsung.
+      </p>
+    </div>
+  </div>
+
+  <!-- FREIGHT FORWARDING -->
+  <div class="service-box">
+    <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1400" alt="Freight Forwarding">
+
+    <div class="service-content">
+      <i class="fa-solid fa-truck-fast"></i>
+      <h3>Freight Forwarding</h3>
+
+      <p>
+        P.Company menjalin kerja sama dengan perusahaan ekspor-impor dalam pengiriman barang internasional melalui jalur laut dan darat. Layanan mencakup pengurusan dokumen, customs clearance, serta koordinasi distribusi hingga tujuan akhir.
+      </p>
+
+      <h4>Result:</h4>
+      <p>
+        Proses pengiriman berhasil dilakukan secara tepat waktu dengan tingkat keamanan barang yang optimal serta meningkatkan kepuasan pelanggan.
+      </p>
+    </div>
+  </div>
+
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Us</h2>
+
+  <div class="about">
+    <p>
+      P.Company adalah perusahaan pelayaran dan logistik maritim terpadu yang menyediakan layanan ship agency, supply chain management, stevedoring, freight forwarding, dan koordinasi stakeholder pelabuhan. Dengan dukungan tenaga profesional dan sistem operasional modern, kami berkomitmen menghadirkan solusi maritim yang aman, cepat, efisien, dan terpercaya.
+    </p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h3>Contact Us</h3>
+
+  <p>Email : info@pcompany.com</p>
+  <p>Admin : +62 812-3456-7890</p>
+
+  <div class="social-icons">
+
+    <a href="https://instagram.com/Pcompany" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+      <span class="social-name">@Pcompany</span>
+    </a>
+
+    <a href="https://wa.me/6281234567890" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="social-name">WhatsApp Admin</span>
+    </a>
+
+    <a href="https://twitter.com/Pcompany" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+      <span class="social-name">@Pcompany</span>
+    </a>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 P.Company | Maritime & Logistics Company</p>
+</footer>
 
 </body>
 </html>
+```
+
+## Nama File
+
+Simpan dengan nama:
+
+```bash
+index.html
+```
+
+## Cara Menjalankan
+
+1. Buka Visual Studio Code
+2. Buat folder baru
+3. Buat file `index.html`
+4. Copy seluruh code di atas
+5. Paste ke dalam file `index.html`
+6. Save
+7. Klik kanan → Open with Live Server
